@@ -1,0 +1,19 @@
+
+<form action="http://localhost:8000/api/users" enctype='application/json' method="POST" name="myform">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="user[email]" value="John"><br>
+    <label for="lname">Last name:</label><br>
+
+    <input type="password" id="lname" name="user[password]" value="Doe"><br><br>
+    <label for="lname">Type:</label><br>
+    <input type="text" id="type" name="user[type]" value=""><br>
+
+    <input type="submit" value="Submit" onclick="test()">
+  </form> 
+
+  <script>
+      function test(){
+        var formData = JSON.stringify($("#myForm").serializeArray());
+        alert(formData)
+      }
+  </script>
